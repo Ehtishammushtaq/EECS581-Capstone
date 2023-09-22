@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import './custom.css';
 import Home from './components/Home';
+
 import AboutUs from './components/AboutUs';
 import AppInterface from './components/AppInterface';
 export default class App extends Component {
@@ -13,9 +14,9 @@ export default class App extends Component {
     return (
       <Layout>
         <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/AboutUs" element={<AboutUs/>}/>
-        <Route path="/App" element={<AppInterface/>}/>
+          <Route path="/" element={<Home/>} />
+          <Route path="/AboutUs" element={<AboutUs/>}/>
+          <Route path="/App" element={<AppInterface/>}/>
         </Routes>
       </Layout>
     );

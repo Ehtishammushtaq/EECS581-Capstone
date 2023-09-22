@@ -1,0 +1,7 @@
+.grid {
+    display: grid;
+    grid-template-columns: 40% 30%;
+    grid-template-rows: calc(36vh - 17rem);
+    text-align: left;
+}
+    

@@ -7,7 +7,9 @@ export class Home extends Component {
     return (
       <div> 
         <h1>Mapalyze</h1>
-        <p>Mapalyze is a web application that allows users to upload a CSV file containing data points and visualize them on a map.</p>
+        <strong>
+        <p>Our app takes multiple floor plans and generates a 3D layout of a building appropriately marking stairs hallways and rooms, with navigation features built on top</p>
+        </strong>
         <p>Mapalyze is built using the following technologies:</p>
         <ul>  
           <li>ASP.NET Core 5.0</li>

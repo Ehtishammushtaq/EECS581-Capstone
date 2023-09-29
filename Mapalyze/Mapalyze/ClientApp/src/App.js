@@ -12,13 +12,17 @@ export default class App extends Component {
 
   render() {
     return (
-      <Layout>
+      <div> 
+
+        <Layout/>
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/AboutUs" element={<AboutUs/>}/>
           <Route path="/App" element={<AppInterface/>}/>
         </Routes>
-      </Layout>
+     
+      </div>
+      
     );
   }
 }

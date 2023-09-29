@@ -1,0 +1,8 @@
+﻿/* NavMenu.module.css */
+
+.navmenu {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.20);
+  background-color: rgb(218, 212, 212);  
+  border-radius: 5%;
+  
+}

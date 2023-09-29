@@ -26,7 +26,6 @@ export class Conversioneg extends Component {
           <li>React Router DOM 5.2.0</li>
           <li>React Scripts 4.0.1</li>
           <li>React Scripts Test 4.0.1</li>
-<<<<<<< Updated upstream
           <li>React Bootstrap 1.4.0</li>
           <li>React CSV Reader 3.0.0</li>
           <li>React Dropzone 11.2.1</li>
@@ -47,8 +46,6 @@ export class Conversioneg extends Component {
           <li>React Router DOM 5.2.0</li>
           <li>React Scripts 4.0.1</li>
           <li>React Scripts Test 4.0.1</li>
-=======
->>>>>>> Stashed changes
           <li>React Scripts Test 4.0.1</li>
           <li>React Scripts Test 4.0.1</li>
           

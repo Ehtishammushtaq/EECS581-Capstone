@@ -1,5 +1,10 @@
 .video {
-    position : relative;
-
+    margin-left: 480px;
+    margin-top: -875px;
+    background-color: rgb(218, 212, 212);
+    border-radius: 1%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    padding: 2%;
+    width: 60%;
 }
 

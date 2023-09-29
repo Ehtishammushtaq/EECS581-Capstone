@@ -16,4 +16,10 @@ html {
 .box-shadow {
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
-
+.navmenu {
+  background-color: rgb(218, 212, 212);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5%;
+  position: relative;
+  
+}

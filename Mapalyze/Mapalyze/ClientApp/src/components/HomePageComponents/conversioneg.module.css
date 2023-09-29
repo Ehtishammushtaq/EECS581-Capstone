@@ -1,7 +1,13 @@
 .grid {
-    display: grid;
-    grid-template-columns: 40% 30%;
-    grid-template-rows: calc(36vh - 17rem);
-    text-align: left;
-}
+    background-color: rgb(218, 212, 212);
+    width: 60%;
+    border-radius: 1%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    margin-right:auto ;
+    margin-left:-23% ;
+    padding: 2%;
     
+   
+}
+
+

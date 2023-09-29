@@ -1,12 +1,11 @@
-.grid {
+.example{
+
     background-color: rgb(218, 212, 212);
-    width: fit-content;
     border-radius: 1%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    padding: 2%;
-    margin-top:5px;
-    
-   
+    padding: 3%;
+    width: 64%;
+    margin-left:101%;
+    margin-top: 1%;
 }
-
 

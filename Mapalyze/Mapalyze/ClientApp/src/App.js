@@ -4,8 +4,9 @@ import { Route, Routes } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import './custom.css';
 import Home from './components/Home';
-
+import Login from './components/Login';
 import AboutUs from './components/AboutUs';
+import SignUp from './components/SignUp';
 import AppInterface from './components/AppInterface';
 export default class App extends Component {
   static displayName = App.name;
@@ -18,6 +19,8 @@ export default class App extends Component {
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/AboutUs" element={<AboutUs/>}/>
+          <Route path="/Login" element={<Login/>}/>
+          <Route path="/Signup" element={<SignUp/>}/>
           <Route path="/App" element={<AppInterface/>}/>
         </Routes>
      

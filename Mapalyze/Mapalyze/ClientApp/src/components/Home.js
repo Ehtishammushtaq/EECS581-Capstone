@@ -8,7 +8,6 @@ export class Home extends Component {
 
   render() {
     return (
-
       <div className={classes.home}>
           <Conversioneg/>
           <Videocomponent/>

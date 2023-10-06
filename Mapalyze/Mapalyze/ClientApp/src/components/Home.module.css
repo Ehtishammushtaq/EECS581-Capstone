@@ -3,4 +3,6 @@
     display: -webkit-box; /* Use flexbox to align items side by side */
     justify-content: space-between; /* Distribute items evenly along the horizontal axis */
     align-items: center; 
+    font-family: 'Florid Sans Book', sans-serif;
+
 }

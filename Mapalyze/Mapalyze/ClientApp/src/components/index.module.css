@@ -1,6 +1,5 @@
-.home{
-
-    display: -webkit-box; /* Use flexbox to align items side by side */
+.mainbody{
+    background: linear-gradient(to right, #00a1ff, #00ff8f);
     justify-content: space-between; /* Distribute items evenly along the horizontal axis */
     align-items: center; 
 }

@@ -1,10 +1,11 @@
 .grid {
-    background-color: rgb(218, 212, 212);
-    width: fit-content;
+
+    background: linear-gradient(to right, #00a1ff, #00ff8f);
+    max-width: 65%;
     border-radius: 1%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     padding: 2%;
-    margin-top:5px;
+
     
    
 }

@@ -1,10 +1,7 @@
 .video {
-    background-color: rgb(218, 212, 212);
+    background: linear-gradient(to right, #00ff8f, #00a1ff);
     border-radius: 1%;
+    padding: 2%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    padding: 4%;
-    width: fit-content;
-    margin-left: 100.5%;
-    margin-top: -88.4%;
-    
+    max-width: webkit-fill-available;
 }

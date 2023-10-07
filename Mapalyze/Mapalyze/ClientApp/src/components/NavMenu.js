@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState ,Component} from 'react';
 import { Collapse, Navbar, Nav,  NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import classes from './NavMenu.module.css';
@@ -12,7 +12,8 @@ export class NavMenu extends Component {
 
     this.toggleNavbar = this.toggleNavbar.bind(this);
     this.state = {
-      collapsed: true
+      collapsed: true,
+      activeLink: ''
     };
   }
 
@@ -22,35 +23,42 @@ export class NavMenu extends Component {
     });
   }
 
+  handleClick(link) {
+    this.setState({
+      activeLink: link
+    });
+  }
+
   render() {
-    const { collapsed } = this.state;
+    const { collapsed, activeLink } = this.state;
 
     return (
-      <header className={classes.navmenu}>
+      <div className={classes.navmenu}>
         <Navbar expand="sm" light>
-          <div className={classes.mainlogo}>
-            <NavbarBrand tag={Link} to="/">Mapalyze</NavbarBrand>
+          <div className={classes.mapalyze}>
+            <NavbarBrand  tag={Link} to="/">Mapalyze</NavbarBrand>
           </div>
 
           <NavbarToggler onClick={this.toggleNavbar} />
 
           <Collapse isOpen={!collapsed} navbar>
-           <div className='ml-auto '>
+           <div className={classes.links}>
             <Nav navbar>
-              <NavItem>
-                <NavLink tag={Link} to="/">Home</NavLink>
+              <NavItem className={classes.home}>
+              <NavLink tag={Link} to="/" className={`${classes.link} ${activeLink === '/' && classes.activeLink}`} onClick={() => this.handleClick('/')}>Home</NavLink>
               </NavItem>
-              <NavItem>
-                <NavLink tag={Link} to="/AboutUs">About Us</NavLink>
+              <NavItem className={classes.about}>
+              <NavLink tag={Link} to="/AboutUs" className={`${classes.link} ${activeLink === '/AboutUs' && classes.activeLink}`} onClick={() => this.handleClick('/AboutUs')}>About Us</NavLink>
               </NavItem>
-              <NavItem>
-                <NavLink tag={Link} to="/Login">Login</NavLink>
+              <NavItem className={classes.login}>
+              <NavLink tag={Link} to="/Login" className={`${classes.link} ${activeLink === '/Login' && classes.activeLink}`} onClick={() => this.handleClick('/Login')}>Login</NavLink>
               </NavItem>
             </Nav>
             </div> 
           </Collapse>
         </Navbar>
-      </header>
+      </div>
+      
     );
   }
 }

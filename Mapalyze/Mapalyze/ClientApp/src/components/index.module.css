@@ -1,6 +1,5 @@
 .mainbody{
-    background: linear-gradient(to right, #00a1ff, #00ff8f);
-    justify-content: space-between; /* Distribute items evenly along the horizontal axis */
-    align-items: center; 
-    font-family: 'Florid Sans Book', sans-serif;
+    background: white;
+    font-family: 'Lucidia Sans Unicode', 'Lucidia Grande',  sans-serif;
+    /*background: linear-gradient(to right, #FDFCFB, #E2D1C3);*/
 }

@@ -36,7 +36,7 @@ export class NavMenu extends Component {
       <div className={classes.navmenu}>
         <Navbar expand="sm" light>
           <div className={classes.mapalyze}>
-            <NavbarBrand  tag={Link} to="/">Mapalyze</NavbarBrand>
+            <NavbarBrand  tag={Link} to="/"  onClick={() => this.handleClick('*')}>Mapalyze</NavbarBrand>
           </div>
 
           <NavbarToggler onClick={this.toggleNavbar} />

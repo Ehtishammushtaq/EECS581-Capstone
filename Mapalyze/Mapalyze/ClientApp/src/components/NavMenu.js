@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import { Collapse, Navbar, Nav,  NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import classes from './NavMenu.module.css';
-
-
+import ColorLogo from '../components/Logos/colorlogo.png';
+import Homelogo from '../components/Logos/Home/home-high-resolution-logo-color-on-transparent-background.png';
 export class NavMenu extends Component {
   static displayName = NavMenu.name;
 
@@ -36,8 +36,12 @@ export class NavMenu extends Component {
       <div className={classes.navmenu}>
         <Navbar expand="sm" light>
           <div className={classes.mapalyze}>
-            <NavbarBrand  tag={Link} to="/"  onClick={() => this.handleClick('*')}>Mapalyze</NavbarBrand>
+            
+            <NavbarBrand  tag={Link} to="/"  onClick={() => this.handleClick('*')}>
+            <img style={{ width: 200, height: "2.5rem", position:'relative' }} src={ColorLogo} alt="Colorlogo"/>
+            </NavbarBrand>
           </div>
+          
 
           <NavbarToggler onClick={this.toggleNavbar} />
 
@@ -45,7 +49,9 @@ export class NavMenu extends Component {
            <div className={classes.links}>
             <Nav navbar>
               <NavItem className={classes.home}>
-              <NavLink tag={Link} to="/" className={`${classes.link} ${activeLink === '/' && classes.activeLink}`} onClick={() => this.handleClick('/')}>Home</NavLink>
+              <NavLink tag={Link} to="/" className={`${classes.link} ${activeLink === '/' && classes.activeLink}`} onClick={() => this.handleClick('/')}>
+                Home 
+              </NavLink>
               </NavItem>
               <NavItem className={classes.about}>
               <NavLink tag={Link} to="/AboutUs" className={`${classes.link} ${activeLink === '/AboutUs' && classes.activeLink}`} onClick={() => this.handleClick('/AboutUs')}>About Us</NavLink>

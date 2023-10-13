@@ -39,10 +39,12 @@ function Login() {
     backgroundColor: "#ffffff",
     borderRadius: "8px",
     padding: "20px",
+    top: "20px",
     boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
     textAlign: "center",
     width: "300px",
     margin: "10px auto", // Center the container horizontally
+    marginTop: "20%"
   };
 
   return (

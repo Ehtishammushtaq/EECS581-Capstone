@@ -37,6 +37,7 @@ function Signup() {
     textAlign: "center",
     width: "300px",
     margin: "10px auto", // Center the container horizontally
+    marginTop: "20%"
   };
 
   return (

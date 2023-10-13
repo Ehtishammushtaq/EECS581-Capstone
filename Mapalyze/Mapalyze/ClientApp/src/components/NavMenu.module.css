@@ -1,53 +1,49 @@
-﻿/* NavMenu.module.css */
-.navmenu {
-  background: linear-gradient(to top bottom, #74ebd5, #9face6);
+﻿.navmenu {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.20);
   border-radius: 1%;
-  height: 80px;
+  height: 80%;
   
 }
 .mapalyze {
-  
   padding-top: 0.5%;
   padding-left: 1%;
 }
+
 .links{
-  font-size: 1.3em;
-  padding-top: 0.5%;
-  padding-left: 85%;
+
+  padding-left: 78%;
   padding-right: 1%;
+  
 }
 .home{
+  padding-top: 2.5%;
   border-radius: 20%;
 }
-.home ::selection{
-  background: linear-gradient(to bottom right, #13547a, #80d0c7);
-  height: 130%;
-  color: white;
-}
-.home :hover{
-  background: linear-gradient(to bottom right, #13547a, #80d0c7);
-  height: 130%;
+.home :hover{ 
+  background: linear-gradient(to bottom right, #0f9ced, #80d0c7);
+  height: 120%;
   color: white;
 }
 .about{
+  padding-top: 0.5%;
   border-radius: 20%;
 }
 .about :hover{
-  height: 130%;
-  background: linear-gradient(to bottom right, #13547a, #80d0c7);
+  height: 120%;
+  background: linear-gradient(to bottom right, #0f9ced, #80d0c7);
   color: white;
 }
 .login{
+  padding-top: 2.5%;
   border-radius: 20%;
 }
 .login :hover{
-  height: 130%;
-  background: linear-gradient(to bottom right, #13547a, #80d0c7);
+  height: 120%;
+  background: linear-gradient(to bottom right, #0f9ced, #80d0c7);
   color: white;
 }
 .activeLink {
-  background: linear-gradient(to bottom right, #13547a, #80d0c7);
-  height: 130%;
+  background: linear-gradient(to bottom right, #0f9ced, #80d0c7);
+  height: 120%;
   color: white !important;
 }

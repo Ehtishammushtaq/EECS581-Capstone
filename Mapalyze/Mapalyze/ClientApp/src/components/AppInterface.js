@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Dummyrender from '../Assets/Dummyrender.jpg';
+import classes from './Appinterface.module.css';
 export class AppInterface extends Component {
   static displayName = AppInterface.name;
 
@@ -36,7 +37,7 @@ export class AppInterface extends Component {
 
   render() {
     return (
-      <div>
+      <div className={classes.appinterface}>
         <p>This is the app AppInterface</p>
         <p>Upload your files here</p>
         <button onClick={this.handleFileInputClick}>Import</button>

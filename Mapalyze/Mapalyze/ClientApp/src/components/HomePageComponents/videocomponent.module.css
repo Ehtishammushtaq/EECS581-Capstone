@@ -1,7 +1,7 @@
 .video {
     position: relative;
     padding: 2%;
-    box-shadow: 0 2px 8px #E2D1C3;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     width: 35%;
     height: auto;
     overflow: hidden;

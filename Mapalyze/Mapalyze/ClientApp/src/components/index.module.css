@@ -1,5 +1,7 @@
 .mainbody{
-    background: white;
     font-family: 'Lucidia Sans Unicode', 'Lucidia Grande',  sans-serif;
-    /*background: linear-gradient(to right, #FDFCFB, #E2D1C3);*/
+    background: linear-gradient(to right, #fff1eb, #ace0f9);
+    width: auto;
+    
 }
+

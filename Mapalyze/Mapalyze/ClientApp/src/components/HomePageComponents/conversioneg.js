@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classes from './conversioneg.module.css';
+            
 export class Conversioneg extends Component {
   static displayName = Conversioneg.name;
 
@@ -10,6 +11,7 @@ export class Conversioneg extends Component {
         <strong>
         <p>Our app takes multiple floor plans and generates a 3D layout of a building appropriately marking stairs hallways and rooms, with navigation features built on top</p>
         </strong>
+        
         <p>Mapalyze is built using the following technologies:</p>
         <ul>  
           <li>ASP.NET Core 5.0</li>

@@ -5,15 +5,13 @@
   
 }
 .mapalyze {
-  padding-top: 0.5%;
+  padding-top: 1%;
   padding-left: 1%;
 }
 
 .links{
-
-  padding-left: 78%;
-  padding-right: 1%;
-  
+  padding-top: 1%;
+  margin-left: 72%;
 }
 .home{
   padding-top: 2.5%;
@@ -21,29 +19,21 @@
 }
 .home :hover{ 
   background: linear-gradient(to bottom right, #0f9ced, #80d0c7);
-  height: 120%;
-  color: white;
 }
 .about{
   padding-top: 0.5%;
   border-radius: 20%;
 }
 .about :hover{
-  height: 120%;
   background: linear-gradient(to bottom right, #0f9ced, #80d0c7);
-  color: white;
 }
 .login{
   padding-top: 2.5%;
   border-radius: 20%;
 }
 .login :hover{
-  height: 120%;
   background: linear-gradient(to bottom right, #0f9ced, #80d0c7);
-  color: white;
 }
 .activeLink {
   background: linear-gradient(to bottom right, #0f9ced, #80d0c7);
-  height: 120%;
-  color: white !important;
 }

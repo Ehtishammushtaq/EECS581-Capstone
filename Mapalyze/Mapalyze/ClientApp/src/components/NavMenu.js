@@ -36,45 +36,49 @@ export class NavMenu extends Component {
 
     return (
 
-      <div className={classes.navmenu}>
-        <Navbar expand="sm" light>
-            <div className={classes.mapalyze}>
-            
-              <NavbarBrand  tag={Link} to="/"  onClick={() => this.handleClick('*')}>
-                <img style={{ width: 'auto', height: "2.5rem" }} src={ColorLogo} alt="Colorlogo"/>
-              </NavbarBrand>
-            </div>
+      <Nav className="bg-blue-600 p-0">
 
-            <NavbarToggler onClick={this.toggleNavbar} />
+      
+        <div className="container mx-auto flex items-center justify-between" >
+          <Navbar expand="sm" light>
+              <div className={classes.mapalyze}>
+              
+                <NavbarBrand  tag={Link} to="/"  onClick={() => this.handleClick('*')}>
+                  <img style={{ width: 'auto', height: "2.5rem" }} src={ColorLogo} alt="Colorlogo"/>
+                </NavbarBrand>
+              </div>
 
-          <Collapse isOpen={!collapsed} navbar>
+              <NavbarToggler onClick={this.toggleNavbar} />
 
-              <div className={classes.links}>
-                
-                <Nav navbar>
-                  <NavItem className={classes.home}>
-                    <NavLink tag={Link} to="/" className={`${classes.link} ${activeLink === '/' && classes.activeLink}`} onClick={() => this.handleClick('/')}>
-                      <img  style={{ width: 'auto', height: "2rem"}} src={homelogo}  alt="homelogo"/>
-                    </NavLink>
-                  </NavItem>
+            <Collapse isOpen={!collapsed} navbar>
+
+                <div className={classes.links}>
                   
-                  <NavItem className={classes.about}>
-                    <NavLink tag={Link} to="/AboutUs" className={`${classes.link} ${activeLink === '/AboutUs' && classes.activeLink}`} onClick={() => this.handleClick('/AboutUs')}>
-                      <img style={{ width: 'auto', height: "3rem" }} src={aboutlogo} alt="homelogo"/>
-                    </NavLink>
-                  </NavItem>
-                  
-                  <NavItem className={classes.login}>
-                    <NavLink tag={Link} to="/Login" className={`${classes.link} ${activeLink === '/Login' && classes.activeLink}`} onClick={() => this.handleClick('/Login')}>
-                      <img style={{ width: 'auto', height: "2rem" }} src={loginlogo} alt="homelogo"/>
-                    </NavLink>
-                  </NavItem>
-                  
-                </Nav>
-              </div> 
-          </Collapse>
-        </Navbar>
-      </div>
+                  <Nav navbar>
+                    <NavItem className={classes.home}>
+                      <NavLink tag={Link} to="/" className={`${classes.link} ${activeLink === '/' && classes.activeLink}`} onClick={() => this.handleClick('/')}>
+                        <img  style={{ width: 'auto', height: "2rem"}} src={homelogo}  alt="homelogo"/>
+                      </NavLink>
+                    </NavItem>
+                    
+                    <NavItem className={classes.about}>
+                      <NavLink tag={Link} to="/AboutUs" className={`${classes.link} ${activeLink === '/AboutUs' && classes.activeLink}`} onClick={() => this.handleClick('/AboutUs')}>
+                        <img style={{ width: 'auto', height: "3rem" }} src={aboutlogo} alt="homelogo"/>
+                      </NavLink>
+                    </NavItem>
+                    
+                    <NavItem className={classes.login}>
+                      <NavLink tag={Link} to="/Login" className={`${classes.link} ${activeLink === '/Login' && classes.activeLink}`} onClick={() => this.handleClick('/Login')}>
+                        <img style={{ width: 'auto', height: "2rem" }} src={loginlogo} alt="homelogo"/>
+                      </NavLink>
+                    </NavItem>
+                    
+                  </Nav>
+                </div> 
+            </Collapse>
+          </Navbar>
+        </div>
+      </Nav>
       
     );
   }

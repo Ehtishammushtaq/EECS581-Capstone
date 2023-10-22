@@ -7,13 +7,13 @@ import Login from './components/Login';
 import AboutUs from './components/AboutUs';
 import SignUp from './components/SignUp';
 import AppInterface from './components/AppInterface';
-import classes from './app.module.css';
+
 export default class App extends Component {
   static displayName = App.name;
 
   render() {
     return (
-      <div className={classes.mainapp}> 
+      <div> 
         <Layout/>
         <Routes>
           <Route path="/" element={<Home/>} />

@@ -1,4 +1,9 @@
 import React, { useState } from "react";
+import axios from 'axios';
+
+const api = axios.create({
+  baseURL: 'https://localhost:7250',
+});
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -21,12 +26,27 @@ function Login() {
     cursor: "pointer",
   };
 
-  const handleLogin = () => {
-    // Here, you can implement your login logic or display a message.
-    alert(`Logging in with username: ${username} and password: ${password}`);
-
-    // Add a link to this login button which will take you to the app interface
-    window.location.href = "/App";
+  const handleLogin = async () => {
+    console.log({ username, password });
+    try {
+      const response = await api.post('/api/users/login', {
+        username,
+        password
+      });
+      
+      if (response.data.success) {
+        alert('Login successful! Welcome to the app.');
+        window.location.href = "/App";
+      } else {
+        alert(response.data.message);
+      }
+    } catch (error) {
+      if (error.response) {
+        alert('Error: ' + error.response.data.message);
+      } else {
+        alert('An error occurred during login. Please try again.');
+      }
+    }
   };
 
   const handleSignup = () => {

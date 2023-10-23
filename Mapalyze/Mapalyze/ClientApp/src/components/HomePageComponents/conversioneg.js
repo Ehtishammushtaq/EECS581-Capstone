@@ -7,9 +7,9 @@ export class Conversioneg extends Component {
   render() {
     return (
       
-      <div className='relative ' >
+      <div className=' flex flex-wrap relative w-full  ' >
         <Example/>
-        <div className='absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 backdrop-filter backdrop-blur-md flex items-start justify-start flex-col text-white'>
+        <div className='absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 backdrop-filter backdrop-blur-md flex items-start justify-start flex-col text-white max-w-screen-3xl'>
            
            
             

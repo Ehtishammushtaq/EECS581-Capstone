@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import classes from './Logos/Aboutus.module.css';
 export class AboutUs extends Component {
   static displayName = AboutUs.name;
 

@@ -36,10 +36,11 @@ export class AppInterface extends Component {
 
   render() {
     return (
-      <div>
+      <div className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r dark:bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r'">
+        <div className='flex flex-col items-center justify-center text-left text-white ml-36 mr-36 mt-28'>
         <p>This is the app AppInterface</p>
         <p>Upload your files here</p>
-        <button onClick={this.handleFileInputClick}>Import</button>
+        <button onClick={this.handleFileInputClick} type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-5">Import</button>
         <br/>
         <br/>
         <img src = {Dummyrender} alt="Dummy render" width="700" height="500"></img>
@@ -55,6 +56,7 @@ export class AppInterface extends Component {
           ref={(input) => (this.fileInput = input)}
           onChange={this.handleFileInputChange}
         />
+      </div>
       </div>
     );
   }

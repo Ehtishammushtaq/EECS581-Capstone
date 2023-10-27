@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Dummyrender from '../Assets/Dummyrender.jpg';
-import classes from './Appinterface.module.css';
 export class AppInterface extends Component {
   static displayName = AppInterface.name;
 

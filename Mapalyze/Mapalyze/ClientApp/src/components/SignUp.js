@@ -58,6 +58,18 @@ function Signup() {
               onChange={handleNewUsernameChange}
             />
           </div>
+          <div className="mb-4">
+            <label htmlFor="new-email" className="text-blue-500">New Email</label>
+            <input
+              className="w-full p-2 text-lg border-b-2 border-blue-500"
+              type="email"
+              id="new-email"
+              name="new-email"
+              placeholder="Email"
+              value={newEmail}
+              onChange={handleNewEmailChange}
+            />
+          </div>
           <div className="mb-6">
             <label htmlFor="new-password" className="text-blue-500">New Password</label>
             <input
@@ -66,7 +78,7 @@ function Signup() {
               name="new-password"
               placeholder="Password"
               className="w-full p-2 text-lg border-b-2 border-blue-500"
-              value={newPassword}
+              value={newPasswordHash}
               onChange={handleNewPasswordChange}
             />
           </div>

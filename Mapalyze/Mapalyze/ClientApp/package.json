@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^1.5.1",
     "@craco/craco": "^7.1.0",
     "@heroicons/react": "^2.0.18",
     "@material-tailwind/react": "^2.1.4",

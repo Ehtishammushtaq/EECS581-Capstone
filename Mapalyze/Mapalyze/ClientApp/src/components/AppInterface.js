@@ -9,6 +9,9 @@ export class AppInterface extends Component {
     this.state = {
       editorOpen: false,
     };
+
+    // Create a ref for the iframe
+    this.editorIframe = React.createRef();
   }
 
   // Function to trigger the file input dialog
@@ -44,9 +47,18 @@ export class AppInterface extends Component {
 
   // Function to toggle the editor
   toggleEditor = () => {
-    this.setState((prevState) => ({
-      editorOpen: !prevState.editorOpen,
-    }));
+    this.setState(
+      (prevState) => ({
+        editorOpen: !prevState.editorOpen,
+      }),
+      () => {
+        if (this.state.editorOpen && this.editorIframe.current) {
+          // Reload the iframe when opening the editor
+          this.editorIframe.current.src =
+            "https://cvdlab.github.io/react-planner/";
+        }
+      }
+    );
   };
 
   render() {
@@ -71,7 +83,7 @@ export class AppInterface extends Component {
           </button>
           {this.state.editorOpen && (
             <iframe
-              src="https://cvdlab.github.io/react-planner/"
+              ref={this.editorIframe}
               title="Editor"
               width="1200"
               height="600"

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import axios from 'axios';
+import axios from "axios";
 
 const api = axios.create({
-  baseURL: 'https://localhost:7250',
+  baseURL: "https://localhost:7250",
 });
 
 function Login() {
@@ -20,22 +20,22 @@ function Login() {
   const handleLogin = async () => {
     console.log({ username, password });
     try {
-      const response = await api.post('/api/users/login', {
+      const response = await api.post("/api/users/login", {
         username,
-        password
+        password,
       });
-      
+
       if (response.data.success) {
-        alert('Login successful! Welcome to the app.');
+        alert("Login successful! Welcome to the app.");
         window.location.href = "/App";
       } else {
         alert(response.data.message);
       }
     } catch (error) {
       if (error.response) {
-        alert('Error: ' + error.response.data.message);
+        alert("Error: " + error.response.data.message);
       } else {
-        alert('An error occurred during login. Please try again.');
+        alert("An error occurred during login. Please try again.");
       }
     }
   };
@@ -51,7 +51,9 @@ function Login() {
         <h2 className="text-3xl font-semibold mb-4">Login</h2>
         <form>
           <div className="mb-4">
-            <label htmlFor="username" className="text-blue-500">Username</label>
+            <label htmlFor="username" className="text-blue-500">
+              Username
+            </label>
             <input
               className="w-full p-2 text-lg border-b-2 border-blue-500"
               type="text"
@@ -62,7 +64,9 @@ function Login() {
           </div>
 
           <div className="mb-6">
-            <label htmlFor="password" className="text-blue-500">Password</label>
+            <label htmlFor="password" className="text-blue-500">
+              Password
+            </label>
             <input
               type="password"
               id="password"

@@ -26,12 +26,22 @@ jobs:
           npm install
           npm run build --if-present
           npm run test --if-present
+
+      
+      #zip the build directory
+      - name: Zip Release
+        uses: TheDoctor0/zip-release@0.7.6
+        with:
+          filename: release.zip
+          path: ./Mapalyze/Mapalyze/ClientApp/build/*
+            
+
       
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
           name: node-app
-          path: .
+          path: release.zip
 
   deploy:
     runs-on: ubuntu-latest
@@ -52,5 +62,5 @@ jobs:
         with:
           app-name: 'mapalyzefronttest'
           slot-name: 'Production'
-          package: .
+          package: release.zip
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9674D33670EE4CD4A45E6667CA8649F1 }}

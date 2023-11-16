@@ -28,7 +28,7 @@ jobs:
           npm run test --if-present
 
       - name: Zip artifact for deployment
-        run: zip release.zip ./Mapalyze/Mapalyze/ClientApp/build -r
+        run: zip release.zip ./Mapalyze/Mapalyze/ClientApp/build/*
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
@@ -58,5 +58,5 @@ jobs:
         with:
           app-name: 'Mapalyze'
           slot-name: 'Production'
-          package: .
+          package: release.zip
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_140678E0A7D5434DB1DE973B451B77B1 }}

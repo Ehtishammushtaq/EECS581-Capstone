@@ -59,4 +59,4 @@ jobs:
           app-name: 'Mapalyze'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BA25550117F54DB68007F9BE57FE203C }}
-          package: './build'
+          package: './Mapalyze/Mapalyze/ClientApp/build'

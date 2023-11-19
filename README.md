@@ -20,3 +20,22 @@ https://asrarfarooq.github.io/Mapalyze/
 * [Elevating UI/UX with Tailwind CSS: Demoed in the meeting]
 * [Continued Code Refactoring - Continously working on that (Demoed in meeting)]
 * [Meeting with Brian McLendon - Discussed in meeeting as well]
+
+## Sprint 5
+
+* [Finishing app integration and testing | Asrar](https://github.com/Ehtishammushtaq/EECS581-Capstone/tree/Asrars_Working_Branch_New)
+	* This task was demoed in the meeting when Asrar used iframes to integrate the editor into the main app. 
+
+* [Adding an SVG parser | Nikhil](https://github.com/Nikhil-Singla/projects/tree/master/LineExtractor/Python)
+	* This task was also demoed in the meeting when Nikhil showcased the Open CV algos to start the work on the parser.  
+
+* [Integration of the SVG parser and the planner | Huye](https://github.com/Ehtishammushtaq/EECS581-Capstone/tree/huy_working_branch)
+	* This task was done by Huye and demoed to the T.A as well showcasing the parsing of JSON directly to the planner without the need for import. 
+
+* [Continuing Code Commenting and Code Refactoring| Ehtisham]( https://github.com/Ehtishammushtaq/EECS581-Capstone/tree/Eht_new_working_branch)
+	* Ehtisham Added code comments and removed redundant classes and modules to make the repo efficient. 
+* Merger resolutions
+	* This was also discussed in the meeting. 
+* [Continuing UI/UX improvements | Asrar]( https://github.com/Ehtishammushtaq/EECS581-Capstone/tree/Asrars_Working_Branch_New)
+	* Asrar added some new text on Pages (About Us), added some buttons and button logic and also reviewed the design of the app. 
+

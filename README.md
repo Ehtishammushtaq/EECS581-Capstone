@@ -26,7 +26,7 @@ https://asrarfarooq.github.io/Mapalyze/
 * [Finishing app integration and testing | Asrar](https://github.com/Ehtishammushtaq/EECS581-Capstone/tree/Asrars_Working_Branch_New)
 	* This task was demoed in the meeting when Asrar used iframes to integrate the editor into the main app. 
 
-* [Adding an SVG parser | Nikhil](https://github.com/Nikhil-Singla/projects/tree/master/LineExtractor/Python)
+* [Adding an SVG parser | Nikhil](https://asrarfarooq.github.io/MapalyzeDocs/research/Parser.zip)
 	* This task was also demoed in the meeting when Nikhil showcased the Open CV algos to start the work on the parser.  
 
 * [Integration of the SVG parser and the planner | Huye](https://github.com/Ehtishammushtaq/EECS581-Capstone/tree/huy_working_branch)

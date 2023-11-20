@@ -29,8 +29,10 @@ https://asrarfarooq.github.io/Mapalyze/
 * [Adding an SVG parser | Nikhil](https://asrarfarooq.github.io/MapalyzeDocs/research/Parser.zip)
 	* This task was also demoed in the meeting when Nikhil showcased the Open CV algos to start the work on the parser.  
 
-* [Integration of the SVG parser and the planner | Huye](https://github.com/Asrarfarooq/Mapalyze/tree/huy_working_branch_sprint_5)
+* [Integration of the SVG parser and the planner | Huye](https://github.com/Asrarfarooq/Mapalyze/tree/huy_working_branch_sprint_5) 
+	* [Main App Integration Link](https://github.com/Ehtishammushtaq/EECS581-Capstone/tree/huy_working_branch_sprint_5)
 	* This task was done by Huye and demoed to the T.A as well showcasing the parsing of JSON directly to the planner without the need for import. 
+
 
 * [Continuing Code Commenting and Code Refactoring| Ehtisham]( https://github.com/Ehtishammushtaq/EECS581-Capstone/tree/Eht_new_working_branch)
 	* Ehtisham Added code comments and removed redundant classes and modules to make the repo efficient. 

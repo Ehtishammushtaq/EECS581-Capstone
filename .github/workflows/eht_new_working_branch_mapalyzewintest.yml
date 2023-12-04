@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - Mapalyze
+name: Build and deploy Node.js app to Azure Web App - Mapalyzewintest
 
 on:
   push:
@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - uses: actions/checkout@v4
@@ -27,9 +27,18 @@ jobs:
           npm run build --if-present
           npm run test --if-present
 
-      - name: Zip artifact for deployment
-        run: zip -r release.zip ./Mapalyze/Mapalyze/ClientApp/build/* 
-
+        
+      - name: Zip Release
+        # You may pin to the exact commit or the version.
+        # uses: TheDoctor0/zip-release@b57d897cb5d60cb78b51a507f63fa184cfe35554
+        uses: TheDoctor0/zip-release@0.7.6
+        with:
+          # Filename for archive
+          filename: release.zip
+          path: ./Mapalyze/Mapalyze/ClientApp/build/* 
+         
+          
+      
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
@@ -42,21 +51,18 @@ jobs:
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-
+    
     steps:
       - name: Download artifact from build job
         uses: actions/download-artifact@v3
         with:
           name: node-app
-
-      - name: Unzip artifact for deployment
-        run: unzip release.zip
-
+      
       - name: 'Deploy to Azure Web App'
-        id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
+        id: deploy-to-webapp
         with:
-          app-name: 'Mapalyze'
+          app-name: 'Mapalyzewintest'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BA25550117F54DB68007F9BE57FE203C }}
-          package: release.zip
+          package: './Mapalyze/Mapalyze/ClientApp/build'
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_FFC75BDD879841079D0E48248784E41D }}

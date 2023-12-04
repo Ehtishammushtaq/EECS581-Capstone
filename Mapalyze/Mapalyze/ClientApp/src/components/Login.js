@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const api = axios.create({
   baseURL: 'https://localhost:7250',
@@ -75,13 +76,14 @@ function Login() {
           </div>
 
           <div className="text-center">
-            <button
+            <Link
+              to="/App"
               className="bg-blue-500 text-white rounded-lg py-2 px-4 text-lg cursor-pointer mr-2"
               type="button"
-              onClick={handleLogin}
+              /*onClick={handleLogin}*/
             >
               Login
-            </button>
+            </Link>
 
             <button
               className="bg-blue-500 text-white rounded-lg py-2 px-4 text-lg cursor-pointer"

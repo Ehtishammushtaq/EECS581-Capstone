@@ -41,3 +41,20 @@ https://asrarfarooq.github.io/Mapalyze/
 * [Continuing UI/UX improvements | Asrar]( https://github.com/Ehtishammushtaq/EECS581-Capstone/tree/Asrars_Working_Branch_New)
 	* Asrar added some new text on Pages (About Us), added some buttons and button logic and also reviewed the design of the app. 
 
+## Sprint 6
+
+ * [Continuing UI/UX Improvements](https://github.com/Ehtishammushtaq/EECS581-Capstone/tree/Eht_new_working_branch)
+	 * Asrar Added new buttons and improved the main interface to some extent. 
+ * [Integration of Azure](https://salmon-smoke-060a31e10.4.azurestaticapps.net/)
+	 * Ehtisham and Asrar Deployed both the App and Editor on Azure and linked them together as well. 
+ * [Azure Tailwind Issues Resolution](https://github.com/Ehtishammushtaq/EECS581-Capstone/tree/Eht_new_working_branch)
+	 * This was fixed by Ehtisham before the App deployment. 
+ * [Code Refactoring](https://github.com/Asrarfarooq/Mapalyze/tree/huy_working_branch_sprint_5%2B6)
+	 * Huy worked on this one and added code comments for better detailing out the code.
+	 * [He also updated appinterface to import json file and to post json file to react planner backend and added comments to this one as well.](https://github.com/Ehtishammushtaq/EECS581-Capstone/tree/huy_working_branch_sprint_5%2B6)
+ * [Research on API Endpoints in Azure](https://asrarfarooq.github.io/MapalyzeDocs/research/research-API-endpoint.docx)
+	 * Mai worked on API end point research which will help us in subsequent sprints to determine how we go about connecting and deploying our own editor API 
+* Continue Researching and Refining the Base Parser
+	* As discussed in the meeting by Nikhil that he is continuously working on refining the base parser is going forward by adding parsing support for more elements  
+ * [Working on Finishing JSON Class for Vertices](https://asrarfarooq.github.io/MapalyzeDocs/research/line.py)
+	 * This was done by Nikhil and he's work can be found in the link. 

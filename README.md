@@ -58,3 +58,14 @@ https://asrarfarooq.github.io/Mapalyze/
 	* As discussed in the meeting by Nikhil that he is continuously working on refining the base parser is going forward by adding parsing support for more elements  
  * [Working on Finishing JSON Class for Vertices](https://asrarfarooq.github.io/MapalyzeDocs/research/line.py)
 	 * This was done by Nikhil and he's work can be found in the link. 
+
+## Sprint 7 
+* [Continuing UI/UX Improvements](https://github.com/Ehtishammushtaq/EECS581-Capstone/tree/huy_working_branch_sprint_7%2B8)
+* [Code Refactoring](https://github.com/Ehtishammushtaq/EECS581-Capstone/tree/huy_working_branch_sprint_7%2B8)
+* Continued Integration/Continuous Deployment (CI/CD)
+* [Integration of Database into Azure]
+* Implementation of Login/Signup after Database Deployment
+	* We identified a critical issue in the app where users can bypass the login process. Even without successful authentication, users can access the main app through the navigation header/bar.
+	* [We decided to fix the problem in sprint 7 and will continue doing it in sprint 8](https://github.com/Ehtishammushtaq/EECS581-Capstone/tree/huy_working_branch_sprint_7%2B8)
+* Implementing the First Phase of Parser-Editor API
+* Starting Research on Navigation inside 3D Models for the Second Half of the Project

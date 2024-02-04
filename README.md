@@ -63,7 +63,7 @@ https://asrarfarooq.github.io/Mapalyze/
 * [Continuing UI/UX Improvements](https://github.com/Ehtishammushtaq/EECS581-Capstone/tree/huy_working_branch_sprint_7%2B8)
 * [Code Refactoring](https://github.com/Ehtishammushtaq/EECS581-Capstone/tree/huy_working_branch_sprint_7%2B8)
 * Continued Integration/Continuous Deployment (CI/CD)
-* [Integration of Database into Azure]
+* [Integration of Database into Azure](https://asrarfarooq.github.io/MapalyzeDocs/research/Intergration_of_Database_into_Azure_.docx)
 * Implementation of Login/Signup after Database Deployment
 	* We identified a critical issue in the app where users can bypass the login process. Even without successful authentication, users can access the main app through the navigation header/bar.
 	* [We decided to fix the problem in sprint 7 and will continue doing it in sprint 8](https://github.com/Ehtishammushtaq/EECS581-Capstone/tree/huy_working_branch_sprint_7%2B8)

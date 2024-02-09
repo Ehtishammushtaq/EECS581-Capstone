@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from 'react';
+import React, { createContext, useState, useEffect } from "react";
 
 // Create authentication context
 export const AuthContext = createContext(null);
@@ -9,20 +9,22 @@ export const AuthProvider = ({ children }) => {
 
   // Check session storage for login state on component mount
   useEffect(() => {
-    const userLoggedIn = sessionStorage.getItem('isLoggedIn') === 'true';
+    const userLoggedIn = sessionStorage.getItem("isLoggedIn") === "true";
     setIsLoggedIn(userLoggedIn);
   }, []);
 
   // Set login state and store in session storage
   const login = () => {
     setIsLoggedIn(true);
-    sessionStorage.setItem('isLoggedIn', 'true');
+    sessionStorage.setItem("isLoggedIn", "true");
   };
 
-  // Clear login state and session storage
+  // Implement the logout function
   const logout = () => {
+    // Clear the session storage or any other persistent storage used
+    sessionStorage.removeItem("isLoggedIn");
+    // Update the state to reflect the user is logged out
     setIsLoggedIn(false);
-    sessionStorage.removeItem('isLoggedIn');
   };
 
   // Provide auth state and handlers to child components

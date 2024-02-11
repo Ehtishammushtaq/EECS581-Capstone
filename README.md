@@ -69,3 +69,17 @@ https://asrarfarooq.github.io/Mapalyze/
 	* [We decided to fix the problem in sprint 7 and will continue doing it in sprint 8](https://github.com/Ehtishammushtaq/EECS581-Capstone/tree/huy_working_branch_sprint_7%2B8)
 * Implementing the First Phase of Parser-Editor API
 * Starting Research on Navigation inside 3D Models for the Second Half of the Project
+
+## Sprint 8
+- [Continue UI/UX Improvements](https://github.com/Ehtishammushtaq/EECS581-Capstone/tree/huy_working_branch_sprint_7%2B8)
+	- The Login & SignUp was refined and other improvements to visitations were done as well. 
+- Continue Code Refactoring
+- Continued Integration/Continuous Deployment (CI/CD)
+- Do More Research on Integration of Database into Azure
+	- The research was done was will be demoed next week, since it is not on GitHub 
+- [Fix the login/signup Logic Problems on Current App for Doing Database Deployment](https://github.com/Ehtishammushtaq/EECS581-Capstone/blob/huy_working_branch_sprint_7%2B8/Mapalyze/Mapalyze/ClientApp/src/ProtectedRoute.js)
+	- This was fixed by Huy by adding protected routes. 
+- Continue Implementing the First Phase of Parser-Editor API
+	- [A video demo of the First phase of parser.](https://kansas-my.sharepoint.com/:v:/r/personal/n210s707_home_ku_edu/Documents/Attachments/1000014328.mp4?csf=1&web=1&e=NtPwsO&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+- [Continue Research on Navigation inside 3D Models for the Second Half of the Project](https://asrarfarooq.github.io/MapalyzeDocs/research/ArtifactScrappedDoc.pdf)
+	- This was scraped due to a change of plans after careful research, this step required sophisticated pathfinding algorithms such as A*, the determination of specific floors is very hard to implement and we decided to put off this feature for now. 

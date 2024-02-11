@@ -80,6 +80,6 @@ https://asrarfarooq.github.io/Mapalyze/
 - [Fix the login/signup Logic Problems on Current App for Doing Database Deployment](https://github.com/Ehtishammushtaq/EECS581-Capstone/blob/huy_working_branch_sprint_7%2B8/Mapalyze/Mapalyze/ClientApp/src/ProtectedRoute.js)
 	- This was fixed by Huy by adding protected routes. 
 - Continue Implementing the First Phase of Parser-Editor API
-	- [A video demo of the First phase of parser.](https://kansas-my.sharepoint.com/:v:/g/personal/n210s707_home_ku_edu/Ef1kPTCvLzJCgGmiqpEb3RkB2htLWiVRY7cmwQZ7-9TwaQ?e=QMBIs5)
+	- [A video demo of the First phase of parser by Nikhil.](https://kansas-my.sharepoint.com/:v:/g/personal/n210s707_home_ku_edu/Ef1kPTCvLzJCgGmiqpEb3RkB2htLWiVRY7cmwQZ7-9TwaQ?e=QMBIs5)
 - [Continue Research on Navigation inside 3D Models for the Second Half of the Project](https://asrarfarooq.github.io/MapalyzeDocs/research/ArtifactScrappedDoc.pdf)
 	- This was scraped due to a change of plans after careful research, this step required sophisticated pathfinding algorithms such as A*, the determination of specific floors is very hard to implement and we decided to put off this feature for now. 

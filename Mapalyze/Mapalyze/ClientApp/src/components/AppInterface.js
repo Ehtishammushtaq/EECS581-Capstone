@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import axios from 'axios'; // Import axios for HTTP requests
-import Dummyrender from '../Assets/Dummyrender.jpg'; // Import an image for rendering
+import Dummyrender from "../Assets/Dummyrender.jpg"; // Import an image for rendering
 
 // Define a class component named AppInterface
 export class AppInterface extends Component {

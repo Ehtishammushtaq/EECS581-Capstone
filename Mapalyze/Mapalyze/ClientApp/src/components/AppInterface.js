@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import axios from 'axios'; // Import axios for HTTP requests
-import Dummyrender from "../Assets/Dummyrender.jpg"; // Import an image for rendering
+import axios from "axios"; // Import axios for HTTP requests
 
 // Define a class component named AppInterface
 export class AppInterface extends Component {
@@ -10,6 +9,17 @@ export class AppInterface extends Component {
   state = {
     selectedFile: null,
   };
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      editorOpen: false,
+    };
+
+    // Create a ref for the iframe
+    this.editorIframe = React.createRef();
+  }
 
   // Function to trigger the file input dialog
   handleFileInputClick = () => {
@@ -21,7 +31,9 @@ export class AppInterface extends Component {
     const file = e.target.files[0]; // Get the selected file
     if (file) {
       // Display file information
-      const fileInfo = `File name: ${file.name}, File size: ${(file.size / 1024).toFixed(2)} KB`;
+      const fileInfo = `File name: ${file.name}, File size: ${(
+        file.size / 1024
+      ).toFixed(2)} KB`;
       this.setState({ selectedFile: file, fileInfo: fileInfo });
 
       // Read the file contents using FileReader
@@ -38,55 +50,84 @@ export class AppInterface extends Component {
     if (this.state.selectedFile) {
       try {
         const formData = new FormData();
-        formData.append('file', this.state.selectedFile);
+        formData.append("file", this.state.selectedFile);
 
         // Post the file to the server using axios
-        await axios.post('http://localhost:4000/upload-json', formData, {
+        await axios.post("http://localhost:4000/upload-json", formData, {
           headers: {
-            'Content-Type': 'multipart/form-data',
+            "Content-Type": "multipart/form-data",
           },
         });
 
         // Open a new tab with the React-Planner app
-        window.open('http://localhost:9000', '_blank');
-
+        window.open("http://localhost:9000", "_blank");
       } catch (error) {
-        console.error('Error uploading file: ', error);
+        console.error("Error uploading file: ", error);
       }
     } else {
-      alert('Please select a JSON file to render.');
+      alert("Please select a JSON file to render.");
     }
   };
 
   // Render method to display the UI
   render() {
+    // Unified button styling
+    const buttonClass =
+      "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-5";
+
     return (
       <div className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 to-gray-600">
-        <div className='flex flex-col items-center justify-center text-left text-white ml-36 mr-36 mt-28'>
+        <div className="flex flex-col items-center justify-center text-left text-white ml-36 mr-36 mt-28">
           <p>This is the app AppInterface</p>
           <p>Upload your JSON file here</p>
-          <button onClick={this.handleFileInputClick} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-5">
+          <button
+            onClick={this.handleFileInputClick}
+            className={buttonClass} // Apply unified button styling
+          >
             Import JSON
           </button>
           {this.state.fileInfo && (
-            <div className="text-sm mt-2">
-              {this.state.fileInfo}
-            </div>
+            <div className="text-sm mt-2">{this.state.fileInfo}</div>
           )}
           <br />
-          <img src={Dummyrender} alt="Dummy render" width="700" height="500"></img>
-          <br />
-          <button onClick={this.handleRender} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          {/*
+            <button
+              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-5"
+              onClick={this.toggleEditor}
+              href = "https://asrarfarooq.github.io/Mapalyze/"
+            
+            >
+              {this.state.editorOpen ? "Close Editor" : "Open Editor"}
+            </button>
+          
+            {this.state.editorOpen && (
+              <iframe
+                ref={this.editorIframe}
+                title="Editor"
+                width="1200"
+                height="600"
+                style={{ border: "none", marginTop: "20px" }}
+              />
+            )}
+            */}
+          <button
+            onClick={this.handleRender}
+            className={buttonClass} // Apply unified button styling
+          >
             Render and Go to React-Planner
           </button>
           <br />
           <input
             type="file"
             accept=".json"
-            style={{ display: 'none' }}
+            style={{ display: "none" }}
             ref={(input) => (this.fileInput = input)}
             onChange={this.handleFileInputChange}
           />
+          <a href="https://ashy-cliff-050f7cc10.4.azurestaticapps.net">
+            <button className={buttonClass}>Editor</button>{" "}
+            {/* Apply unified button styling */}
+          </a>
         </div>
       </div>
     );

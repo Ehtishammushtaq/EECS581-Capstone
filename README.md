@@ -80,6 +80,29 @@ https://asrarfarooq.github.io/Mapalyze/
 - [Fix the login/signup Logic Problems on Current App for Doing Database Deployment](https://github.com/Ehtishammushtaq/EECS581-Capstone/blob/huy_working_branch_sprint_7%2B8/Mapalyze/Mapalyze/ClientApp/src/ProtectedRoute.js)
 	- This was fixed by Huy by adding protected routes. 
 - Continue Implementing the First Phase of Parser-Editor API
-	- [A video demo of the First phase of parser by Nikhil.](https://kansas-my.sharepoint.com/:v:/g/personal/n210s707_home_ku_edu/Ef1kPTCvLzJCgGmiqpEb3RkB2htLWiVRY7cmwQZ7-9TwaQ?e=QMBIs5)
+	- [A video demo of the First phase of parser.](https://kansas-my.sharepoint.com/:v:/r/personal/n210s707_home_ku_edu/Documents/Attachments/1000014328.mp4?csf=1&web=1&e=NtPwsO&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 - [Continue Research on Navigation inside 3D Models for the Second Half of the Project](https://asrarfarooq.github.io/MapalyzeDocs/research/ArtifactScrappedDoc.pdf)
 	- This was scraped due to a change of plans after careful research, this step required sophisticated pathfinding algorithms such as A*, the determination of specific floors is very hard to implement and we decided to put off this feature for now. 
+
+## Sprint 9
+
+- Persist in refining code structure and remove redundant code
+	- We removed some previously created yml files which were enabling us to deploye the app statically, but for the merger of the new backend we needed to get rid of them. This way we reduced some redundancy that allowed us to move forward with our vision.
+
+- Execute phased deployment strategy:
+	-  As discussed in the meeting, we planned to execute phased deployment strategy since we were unsure of some of the things that would be used for deploying all of our micro-services. This would allow us some time to test our micro-services before we have public endpoints sending API requests. We did this by containerizing the Mapalyze (FrontEnd, Backend), ReactPlanner (FrontEnd, Backend), & the Parser into three different Web App services or App Spaces as Azure calls them. A demo was shown on how these services would communicate between each other. 
+- Parser Microservice Deployment: 
+	- We used this [guide]( https://learn.microsoft.com/en-us/azure/app-service/quickstart-python?tabs=flask%2Cwindows%2Cazure-cli%2Cvscode-deploy%2Cdeploy-instructions-azportal%2Cterminal-bash%2Cdeploy-instructions-zip-azcli) by Microsoft to help us deploy our Parser as a micro-service in Azure. The results were promising though further testing and refinement is needed, the full deployment will stretch to next sprint, though we should have an early demo by next week. All the deployment is already done and the app is up and running locally as well as online.  The code can be found [here]( https://github.com/Asrarfarooq/MapalyzeParser) along with all the workflows.
+- Research Frontend - Parser linkage & Initiate Development
+	- As discussed in the meeting this linkage was crucial in the development phase as it was the only workflow letting us send the image data to the parser and from there to the react planner, the research was done and discussed in the meeting that we could leverage the use of Azure App Spaces. 
+	- Here's a snapshot of how are getting the pipelines ready in Azure App spaces though it wasn't in the Sprint 9, we went a step ahead to make sure things go well as planned.
+	
+	- Snapshot of Azure App Spaces![Snapshot of Azure App Spaces](https://i.postimg.cc/VkhfvQwt/Pasted-Graphic.png)
+- Research File Upload and storage in Azure DB Research Parser - Editor linkage & Initiate Development
+	- As previously discussed on multiple occasions, the image upload is an important element in the whole CI/CD pipeline as it gets the image data from the user and tries to convert it to compatible JSON. 
+	- We have been doing extensive research on how to utilize blobs or Azure File Storage options. [Here]( https://asrarfarooq.github.io/MapalyzeDocs/research/Reseach-FileUpload_Storage-in-AzureDB.docx) is a research document, providing extensive detail about how we plan to add this feature to the architecture. 
+- Fix Merge Conflicts, Reduce Branches
+	- For this artifact we went ahead and deleted redundant branches and also have merged successfully everything to the main. This merger includes the latest Tailwind enhanced frontend and the good old dotnet backend used in hand with SQL database auth from azure to authenticate the user and let them use the app. For further development all the team members will now branch off of the new main to work on their individual tasks.   
+	- The merger introduced a lot of conflicts which were efficiently resolved by the team.
+	- [Here]( https://github.com/Ehtishammushtaq/EECS581-Capstone/commit/7af4507ac2b52eae9b46e3e458110eb4534ff4e5) is the branch merger commit hash which showcases in detail the things that were merged. 
+- Overall this sprint saw a lot of changes in terms of branches, tech stack, deployments as well as pre-laid out plans of CI/CD, pipelines, architecture, which will surely help our team achieve the goals of upcoming sprints. 

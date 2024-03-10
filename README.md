@@ -106,3 +106,17 @@ https://asrarfarooq.github.io/Mapalyze/
 	- The merger introduced a lot of conflicts which were efficiently resolved by the team.
 	- [Here]( https://github.com/Ehtishammushtaq/EECS581-Capstone/commit/7af4507ac2b52eae9b46e3e458110eb4534ff4e5) is the branch merger commit hash which showcases in detail the things that were merged. 
 - Overall this sprint saw a lot of changes in terms of branches, tech stack, deployments as well as pre-laid out plans of CI/CD, pipelines, architecture, which will surely help our team achieve the goals of upcoming sprints. 
+
+## Sprint 10
+- Completion of Deployment Process for Three Separate on Azure
+	- We deployed everything to Azure, we used Azure App Services and App Spaces to deploy our codebase via VSCode CLI. 
+	- Post deployment we encountered functionality issues which we'll fix in the upcoming sprint.
+- Enhanced Line Detection in Parser Module
+	- This was done by Nikhil to improve the edge detection and will be demoed in the next Weekly meeting, since there's no way of showing it here. 
+- Initiation of Research on Pipelines and API Endpoint Integration
+	- The research was laid out to see how are we finally going to connect these services offline as well as online. The research doc will be posted on our [site]( https://asrarfarooq.github.io/MapalyzeDocs/). 
+- Research and Development on Dynamic Deployment Using Azure App Services and App Spaces
+	- This artifact was demoed to the TA, in the last sprint where we deployed the flask app, using azure app spaces
+	- The deployment detail and the links can be found [here]( https://github.com/Asrarfarooq/MapalyzeParser/actions/runs/8043901405)
+- MVP Testing and Bug Fixing Post-Deployment
+	- We are rigorously testing the product we have up until now, we are facing a lot of unexpected issues post-deployment and have identified majority of them and will try to finish fixing them in the next sprint. 

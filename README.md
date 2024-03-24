@@ -120,3 +120,20 @@ https://asrarfarooq.github.io/Mapalyze/
 	- The deployment detail and the links can be found [here]( https://github.com/Asrarfarooq/MapalyzeParser/actions/runs/8043901405)
 - MVP Testing and Bug Fixing Post-Deployment
 	- We are rigorously testing the product we have up until now, we are facing a lot of unexpected issues post-deployment and have identified majority of them and will try to finish fixing them in the next sprint. 
+
+
+## Sprint 11
+- Fixed deployment issues with Azure. 
+  - We attempted to resolve the deployment issues with Azure, but .NET was not compatible with our version of the parser. We also tried running the parser as a separate micro-service, but that was unsuccessful. Consequently, we proceeded with our fallback plan.
+- API endpoints for Mapalyze 
+  - We added API endpoints for Mapalyze that enabled users to import floor plans successfully. These floor plans were then sent to the backend of ReactPlanner through an API call. The implementation can be found [here](https://github.com/Asrarfarooq/Mapalyze/tree/huy_working_branch_for_putting_everything_together_locally/server).
+- Work to get everything operational locally. 
+  - We successfully demoed our MVP to the TA. Before finalizing the MVP, we made some design modifications to our existing architecture.
+  - We integrated the Parser with the ReactPlanner backend, as it was more feasible to do so. The RP backend is written in JavaScript, which integrates more smoothly with Python than our .NET React App (Mapalyze).
+  - ![New Architecture of our product](https://i.ibb.co/qNDcSHj/IMG-8963.jpg)
+- Added file upload on the Main Page of Mapalyze 
+  - In line with the API artifact discussed earlier, we implemented a file upload feature on the Main Page of Mapalyze and modified the backend of ReactPlanner to support these changes. The specific code changes can be viewed [here](https://github.com/Ehtishammushtaq/EECS581-Capstone/blob/huy_working_branch_for_putting_everything_together_locally/Mapalyze/Mapalyze/ClientApp/src/components/AppInterface.js).
+- Resolved the Parser resolution issue for various monitors 
+  - We addressed the resolution issues our parser had with screens of different sizes by enlarging the canvas to accommodate various screen sizes. The updated parser code is available [here](https://asrarfarooq.github.io/MapalyzeDocs/code/draw_FINAL.py). We also improved line detection by scaling input images to better fit spaces in the floor plans.
+- Conducted additional testing 
+  - Further testing uncovered issues with IP configurations during login and some problems with the folder structures set up to retrieve JSON files. We plan to address these in the upcoming sprint.

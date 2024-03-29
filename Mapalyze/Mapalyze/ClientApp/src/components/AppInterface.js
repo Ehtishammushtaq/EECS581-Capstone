@@ -30,18 +30,15 @@ export class AppInterface extends Component {
   handleFileInputChange = (e) => {
     const file = e.target.files[0]; // Get the selected file
     if (file) {
+      // Validate file type
+      if (!file.type.match('image/png')) {
+        alert('Please select a PNG file.');
+        return;
+      }
+  
       // Display file information
-      const fileInfo = `File name: ${file.name}, File size: ${(
-        file.size / 1024
-      ).toFixed(2)} KB`;
+      const fileInfo = `File name: ${file.name}, File size: ${(file.size / 1024).toFixed(2)} KB`;
       this.setState({ selectedFile: file, fileInfo: fileInfo });
-
-      // Read the file contents using FileReader
-      const reader = new FileReader();
-      reader.onload = (readEvent) => {
-        console.log(readEvent.target.result); // Log the file contents to the console
-      };
-      reader.readAsText(file); // Read the file as text
     }
   };
 
@@ -51,23 +48,24 @@ export class AppInterface extends Component {
       try {
         const formData = new FormData();
         formData.append("file", this.state.selectedFile);
-
+  
         // Post the file to the server using axios
-        await axios.post("http://localhost:4000/upload-json", formData, {
+        await axios.post("http://localhost:4000/upload-png", formData, {
           headers: {
             "Content-Type": "multipart/form-data",
           },
         });
-
+  
         // Open a new tab with the React-Planner app
         window.open("http://localhost:9000", "_blank");
       } catch (error) {
         console.error("Error uploading file: ", error);
       }
     } else {
-      alert("Please select a JSON file to render.");
+      alert("Please select a PNG file to render.");
     }
   };
+  
 
   // Render method to display the UI
   render() {
@@ -79,12 +77,12 @@ export class AppInterface extends Component {
       <div className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 to-gray-600">
         <div className="flex flex-col items-center justify-center text-left text-white ml-36 mr-36 mt-28">
           <p>This is the app AppInterface</p>
-          <p>Upload your JSON file here</p>
+          <p>Upload your PNG picture here</p>
           <button
             onClick={this.handleFileInputClick}
             className={buttonClass} // Apply unified button styling
           >
-            Import JSON
+            Import PNG
           </button>
           {this.state.fileInfo && (
             <div className="text-sm mt-2">{this.state.fileInfo}</div>
@@ -119,7 +117,7 @@ export class AppInterface extends Component {
           <br />
           <input
             type="file"
-            accept=".json"
+            accept=".png"
             style={{ display: "none" }}
             ref={(input) => (this.fileInput = input)}
             onChange={this.handleFileInputChange}

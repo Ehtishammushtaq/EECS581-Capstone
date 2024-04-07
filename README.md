@@ -137,3 +137,19 @@ https://asrarfarooq.github.io/Mapalyze/
   - We addressed the resolution issues our parser had with screens of different sizes by enlarging the canvas to accommodate various screen sizes. The updated parser code is available [here](https://asrarfarooq.github.io/MapalyzeDocs/code/draw_FINAL.py). We also improved line detection by scaling input images to better fit spaces in the floor plans.
 - Conducted additional testing 
   - Further testing uncovered issues with IP configurations during login and some problems with the folder structures set up to retrieve JSON files. We plan to address these in the upcoming sprint.
+
+## Sprint 12
+- Set up folder directories for JSON files
+	- For this requirement we added a dedicated folder that stores the JSON files obtained after parsing, this ensures that the planner is able to generate the floor plans properly after fetching the JSON. Here is the code for elaboration [Github Commit Link](https://github.com/Asrarfarooq/Mapalyze/commit/b549c230529a238f83eebf446bc02628291a939d)
+- Fixing retrieval directories for uploaded floor plans
+	- For this artifact we setup an uploads folder that would store the upcoming uploaded image that was sent via an API call from the Mapalyze front end. This would ensure the image is stored in a proper pipeline before being sent to the parser. Github link for the code is [here](https://github.com/Asrarfarooq/Mapalyze/commit/d94f5259b9f032bc569a0f84e4043a65b7d0c30a).
+- Resolve public access/IP issues in Azure firewall.
+	- We faced issues with login when any user who didn't own the database or whose IP wasn't added to firewall was blocked from the traffic. We made sure all valid user's are able to get into the app by setting up new firewall policies. 
+	![Azure Firewall Snapshot](https://i.postimg.cc/Kcnp4s6g/image.png)
+- Complete the SQL DB update on the new Azure Resource Group
+	- Our previous DB is no longer operational as it was on a free subscription, and we have exhausted the credits allocated to it. We have now migrating to a new, identical DB, maintaining the users and   hashes.
+	- ![enter image description here](https://i.ibb.co/1LJgsDy/25b8a796-352c-4558-a796-649c4e343c04.png)
+- Implemented holistic changes in the Frontend
+	- We plan to continue refine minor front-end and UI/UX components to make the app user friendly. 
+- Test the MVP
+	- We again are continuously testing the app which revealed that the parser is taking a lot of time for images with multiple edges, again this issue will be fixed in future sprints if possible. 

@@ -153,3 +153,17 @@ https://asrarfarooq.github.io/Mapalyze/
 	- We plan to continue refine minor front-end and UI/UX components to make the app user friendly. 
 - Test the MVP
 	- We again are continuously testing the app which revealed that the parser is taking a lot of time for images with multiple edges, again this issue will be fixed in future sprints if possible. 
+
+## Final Sprint
+- Front-End Documentation
+	- Attached a document detailing the Front-End, [Link](https://asrarfarooq.github.io/MapalyzeDocs/docs/MapalyzeDOC.pdf).
+- Back-End Codebase Documentation
+	- Attached a document detailing the Back-End, [Link](https://asrarfarooq.github.io/MapalyzeDocs/docs/Back-End_Codebase_Documentation.docx).
+- Database and Architecture Documentation
+	- Attached a document detailing the DB & Arch, [Link](https://asrarfarooq.github.io/MapalyzeDocs/docs/DB%20&%20Arch.docx).
+- Parser Documentation
+	- Attached a document detailing the Parser, [Link](https://asrarfarooq.github.io/MapalyzeDocs/docs/Parser_Changes.docx).
+- Minor Front-End Enhancements
+	- We made some minor enhancements regarding colors and elements, to make the UI user friendly and neat.
+- Testing
+	- We also did additional testing and we think we are finished with the whole deployment. 

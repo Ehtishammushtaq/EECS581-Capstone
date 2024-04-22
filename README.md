@@ -160,7 +160,7 @@ https://asrarfarooq.github.io/Mapalyze/
 - Back-End Codebase Documentation
 	- Attached a document detailing the Back-End, [Link](https://asrarfarooq.github.io/MapalyzeDocs/docs/Back-End_Codebase_Documentation.docx).
 - Database and Architecture Documentation
-	- Attached a document detailing the DB & Arch, [Link](https://asrarfarooq.github.io/MapalyzeDocs/docs/DB%20&%20Arch.docx).
+	- Attached a document detailing the DB & Arch, [Link](https://asrarfarooq.github.io/MapalyzeDocs/docs/DB&Arch.docx).
 - Parser Documentation
 	- Attached a document detailing the Parser, [Link](https://asrarfarooq.github.io/MapalyzeDocs/docs/Parser_Changes.docx).
 - Minor Front-End Enhancements
